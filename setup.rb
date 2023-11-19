@@ -7,6 +7,7 @@ require_relative 'lib/employee'
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 puts 'Establishing connection to database ...'
+
 ActiveRecord::Base.establish_connection(
   adapter: 'postgresql',
   database: 'ar_exercises',
@@ -18,6 +19,7 @@ ActiveRecord::Base.establish_connection(
   encoding: 'unicode',
   min_messages: 'error'
 )
+
 puts 'CONNECTED'
 
 puts 'Setting up Database (recreating tables) ...'
